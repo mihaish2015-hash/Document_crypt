@@ -166,18 +166,18 @@ int main(int argc, char **argv)
     int len=strlen(argv[3]);
     for(int i=0;i<len;i++)
         if(!strchr(all,argv[3][i])) {
-            printf("Cheia contine caractere invalide !\n");
+            printf("The key contains invalid characters !\n");
             exit(1);
         }
     while(size*size < len)
         size++;
     if(size*size > len) {
-        printf("Cheia poate fi formata doar din 1, 4, 9 sau 16 caractere\n");
+        printf("The key must have a square number of characters !\n");
         exit(1);
     }
     int **key_mat=matrix_calc(argv[3], size);
     if(!(det(key_mat,size)%NR)) {
-        printf("Din pacate, aceasta cheie nu poate fi folosita. Incearca alta !\n");
+        printf("Unfortunately, this key cannot be used. Try another one !\n");
         exit(1);
     }
     char c;
@@ -229,7 +229,7 @@ int main(int argc, char **argv)
             ind++;
     }
     if(new_dim && !(det(key_mat2,new_dim)%NR)) {
-        printf("Din pacate, aceasta cheie nu poate fi folosita. Incearca alta !\n");
+        printf("Unfortunately, this key cannot be used. Try another one !\n");
         exit(1);
     }
             
