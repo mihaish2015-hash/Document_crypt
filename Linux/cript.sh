@@ -12,7 +12,7 @@ read act
 echo -e -n "What key do you want to use ?\nAnswer: "
 read key
 if [[ $path == *.txt ]]; then
-    ./cript  "$path" "$act" "$key"
+    #path/to/your/cript  "$path" "$act" "$key"
 else
     echo "Only .txt files can be encrypted/decrypted !"
     exit 1
